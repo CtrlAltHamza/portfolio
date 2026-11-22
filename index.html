@@ -202,8 +202,8 @@ let W,H,ang=.6,mx=0;
 function size(){const d=devicePixelRatio||1;W=cv.clientWidth;H=cv.clientHeight;cv.width=W*d;cv.height=H*d;cx.setTransform(d,0,0,d,0,0)}
 function css(n){return getComputedStyle(document.documentElement).getPropertyValue(n)}
 function draw(){
-  cx.clearRect(0,0,W,H);const a=css('--accent').trim(),b=css('--accent2').trim(),ca=Math.cos(ang),sa=Math.sin(ang),tilt=.5,ct=Math.cos(tilt),st=Math.sin(tilt);
-  const out=P.map(([x,y,z])=>{const rx=x*ca-z*sa,rz=x*sa+z*ca,ry=y*ct-rz*st,rz2=y*st+rz*ct,k=1/(2.6-rz2);return[rx*k*W*.95+W/2,-ry*k*W*.95+H*.55,rz2,y]}).sort((p,q)=>p[2]-q[2]);
+  cx.clearRect(0,0,W,H);const a=css('--accent').trim(),b=css('--accent2').trim(),ca=Math.cos(ang),sa=Math.sin(ang),tilt=.38,ct=Math.cos(tilt),st=Math.sin(tilt);
+  const out=P.map(([x,y,z])=>{const rx=x*ca-z*sa,rz=x*sa+z*ca,ry=y*ct-rz*st,rz2=y*st+rz*ct,k=1/(2.6-rz2);return[rx*k*W*.68+W/2,-ry*k*W*.68+H*.5,rz2,y]}).sort((p,q)=>p[2]-q[2]);
   for(const[px,py,pz,py0]of out){cx.globalAlpha=.35+.65*((pz+1.2)/2.4);cx.fillStyle=py0>-.2?b:a;cx.beginPath();cx.arc(px,py,1.1+.9*((pz+1.2)/2.4),0,6.3);cx.fill()}
   cx.globalAlpha=1}
 function loop(){ang+=.004+mx*.01;draw();requestAnimationFrame(loop)}
