@@ -1,20 +1,26 @@
-# Portfolio
+# Hamza Khurram — Portfolio
 
-Personal portfolio of **Hamza Khurram**, an AI engineer focused on LLM agents, MLOps and deep learning.
+A personal portfolio for **Hamza Khurram**, an AI engineer focused on LLM agents, MLOps, and deep learning.
 
-**Sections:** hero with an interactive point cloud, about, featured and additional projects (linked to their GitHub repos), skills, education and certification, and contact.
+## Features
+
+- Responsive, accessible design with light and dark themes.
+- Animated interactive point-cloud artwork and scroll reveals, with reduced-motion support.
+- Filterable project cards, hover details, and one-click email copying.
+- Direct links to project repositories, GitHub, LinkedIn, and email.
 
 ## Tech
-- Plain HTML, CSS and JavaScript in a single `index.html`. No build step and no dependencies.
-- Responsive layout, automatic light and dark mode, keyboard focus styles and reduced-motion support.
-- Canvas animation of a synthetic 3D point cloud that reacts to the mouse.
 
-## Edit your details
-Open `index.html`, find the `CONTACT` object near the bottom and set your email, LinkedIn URL and GitHub URL.
+Plain HTML, CSS, and JavaScript in `index.html`. There is no backend, build step, or package dependency.
+
+## Update contact details
+
+Edit the `CONTACT` object near the bottom of `index.html` to update the email address, LinkedIn profile, or GitHub profile.
 
 ## Run locally
-Open `index.html` in a browser, or serve it with `python3 -m http.server`.
+
+Open `index.html` in a browser, or serve this folder with `python -m http.server`.
 
 ## Deploy on Vercel
-1. Push this repo to GitHub.
-2. Go to [vercel.com/new](https://vercel.com/new), import the repo and deploy. Leave the framework preset as "Other" with no build command.
+
+Import the GitHub repository at [vercel.com/new](https://vercel.com/new). Select **Other** as the framework preset and leave the build and output settings at their defaults; Vercel will serve `index.html` as a static site.
