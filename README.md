@@ -11,16 +11,16 @@ A personal portfolio for **Hamza Khurram**, an AI engineer focused on LLM agents
 
 ## Tech
 
-Plain HTML, CSS, and JavaScript in `index.html`. There is no backend, build step, or package dependency.
+Plain HTML, CSS, and JavaScript in `Hamza_Khurram_portfolio.html`. There is no backend, build step, or package dependency.
 
 ## Update contact details
 
-Edit the `CONTACT` object near the bottom of `index.html` to update the email address, LinkedIn profile, or GitHub profile.
+Edit the `CONTACT` object near the bottom of `Hamza_Khurram_portfolio.html` to update the email address, LinkedIn profile, or GitHub profile.
 
 ## Run locally
 
-Open `index.html` in a browser, or serve this folder with `python -m http.server`.
+Open `Hamza_Khurram_portfolio.html` in a browser, or serve this folder with `python -m http.server` and visit `http://localhost:8000/Hamza_Khurram_portfolio.html`.
 
 ## Deploy on Vercel
 
-Import the GitHub repository at [vercel.com/new](https://vercel.com/new). Select **Other** as the framework preset and leave the build and output settings at their defaults; Vercel will serve `index.html` as a static site.
+Import the GitHub repository at [vercel.com/new](https://vercel.com/new). Select **Other** as the framework preset and leave the build and output settings at their defaults. `vercel.json` routes the root URL to `Hamza_Khurram_portfolio.html`.

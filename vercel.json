@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/Hamza_Khurram_portfolio.html"
+    }
+  ]
+}
