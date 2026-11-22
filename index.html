@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Hamza Khurram | AI Engineer</title>
 <meta name="description" content="Hamza Khurram is an AI engineer building LLM agents, ML pipelines and production-ready AI systems.">
-<meta name="theme-color" content="#f5f3ed">
+<meta name="theme-color" content="#101714">
 <meta property="og:title" content="Hamza Khurram | AI Engineer">
 <meta property="og:description" content="AI engineer building LLM agents, ML pipelines and production-ready AI systems.">
 <meta property="og:type" content="website">
@@ -14,8 +14,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-:root{color-scheme:light;--bg:#f5f3ed;--surface:#fffefa;--ink:#17211e;--muted:#68736e;--line:#deded5;--accent:#3156dc;--accent2:#a9df75;--warm:#f0a477;--r:18px;--head:'Bricolage Grotesque',Georgia,serif;--body:'DM Sans',system-ui,sans-serif}
-:root[data-theme="dark"]{color-scheme:dark;--bg:#101714;--surface:#19221e;--ink:#f2f4ec;--muted:#aab5ac;--line:#303b34;--accent:#91a6ff;--accent2:#c0ed8d;--warm:#f3aa80}
+:root{color-scheme:dark;--bg:#101714;--surface:#19221e;--ink:#f2f4ec;--muted:#aab5ac;--line:#303b34;--accent:#91a6ff;--accent2:#c0ed8d;--warm:#f3aa80;--r:18px;--head:'Bricolage Grotesque',Georgia,serif;--body:'DM Sans',system-ui,sans-serif}
+:root[data-theme="light"]{color-scheme:light;--bg:#f5f3ed;--surface:#fffefa;--ink:#17211e;--muted:#68736e;--line:#deded5;--accent:#3156dc;--accent2:#a9df75;--warm:#f0a477}
 *{box-sizing:border-box;margin:0}
 html{scroll-behavior:smooth;scroll-padding-top:82px}
 body{background:var(--bg);color:var(--ink);font:400 16px/1.7 var(--body);-webkit-font-smoothing:antialiased;transition:background .3s,color .3s}
@@ -220,12 +220,12 @@ footer a:hover{color:var(--accent)}
 
 <script>
 const CONTACT={
-  email:'mhamzakhurram@gmail.com',
+  email:'mhamzakhurram121@gmail.com',
   linkedin:'https://www.linkedin.com/in/hamzakhurram121',
   github:'https://github.com/CtrlAltHamza'
 };
 document.querySelectorAll('[data-link]').forEach(a=>{
-  const k=a.dataset.link;a.href=k==='email'?'mailto:'+CONTACT.email:CONTACT[k];
+  const k=a.dataset.link;a.href=k==='email'?'https://mail.google.com/mail/?view=cm&fs=1&to='+encodeURIComponent(CONTACT.email):CONTACT[k];
   if(k!=='email'){a.target='_blank';a.rel='noopener noreferrer'}
 });
 document.getElementById('yr').textContent=new Date().getFullYear();
@@ -233,8 +233,8 @@ document.getElementById('yr').textContent=new Date().getFullYear();
 /* Theme preference */
 const themeButton=document.querySelector('.theme-toggle');
 const savedTheme=localStorage.getItem('theme');
-if(savedTheme==='dark'||savedTheme==='light')document.documentElement.dataset.theme=savedTheme;
-function updateThemeButton(){const dark=document.documentElement.dataset.theme==='dark';themeButton.textContent=dark?'☼':'◐';themeButton.setAttribute('aria-label',dark?'Switch to light theme':'Switch to dark theme')}
+if(savedTheme==='light'||savedTheme==='dark')document.documentElement.dataset.theme=savedTheme;else document.documentElement.dataset.theme='dark';
+function updateThemeButton(){const dark=document.documentElement.dataset.theme!=='light';themeButton.textContent=dark?'☼':'◐';themeButton.setAttribute('aria-label',dark?'Switch to light theme':'Switch to dark theme')}
 updateThemeButton();
 themeButton.addEventListener('click',()=>{const next=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=next;localStorage.setItem('theme',next);updateThemeButton()});
 
@@ -247,7 +247,7 @@ document.querySelectorAll('.filter').forEach(button=>button.addEventListener('cl
 
 /* Copy-to-clipboard contact shortcut */
 const copyButton=document.getElementById('copy-email');
-copyButton.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(CONTACT.email);copyButton.textContent='Email copied!';setTimeout(()=>copyButton.textContent='Copy email',1800)}catch(error){window.location.href='mailto:'+CONTACT.email}});
+copyButton.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(CONTACT.email);copyButton.textContent='Email copied!';setTimeout(()=>copyButton.textContent='Copy email',1800)}catch(error){window.location.href='https://mail.google.com/mail/?view=cm&fs=1&to='+encodeURIComponent(CONTACT.email)}});
 
 /* Section reveal */
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.08});
