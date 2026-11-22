@@ -112,6 +112,29 @@ footer a:hover{color:var(--accent)}
 @media(max-width:900px){.hero{grid-template-columns:1fr .8fr;min-height:0;padding:72px 0}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.skills{grid-template-columns:repeat(2,minmax(0,1fr))}.about{gap:32px}}
 @media(max-width:680px){.wrap{padding:0 20px}nav{min-height:64px}nav ul{gap:15px}nav ul li:nth-child(n+4){display:none}.theme-toggle{width:36px;height:36px}.hero{grid-template-columns:1fr;padding:68px 0 48px;gap:28px}.hero h1{font-size:clamp(58px,16vw,86px)}.visual{max-width:430px;margin:0 auto;width:100%}.orbit-label{right:0}section{padding:68px 0}.about,.edu{grid-template-columns:1fr}.section-head{align-items:flex-start;flex-direction:column;gap:16px}.featured,.grid,.skills{grid-template-columns:1fr}.featured .proj:first-child{grid-row:auto;min-height:0}.featured .proj:first-child h3{font-size:25px}.filters{margin-top:20px}footer{flex-direction:column}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{transition:none!important;scroll-behavior:auto!important;animation:none!important}.rv{opacity:1;transform:none}}
+@page{size:A4;margin:14mm}
+@media print{
+:root,:root[data-theme="light"]{color-scheme:light;--bg:#fff;--surface:#fff;--ink:#17211e;--muted:#4e5c55;--line:#d8ded8;--accent:#3156dc;--accent2:#a9df75;--warm:#d17b4d}
+html,body{background:#fff!important;color:#17211e!important;font-size:10pt;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+header{position:static;background:#fff;backdrop-filter:none}
+.wrap{max-width:none;padding:0}
+.theme-toggle,.filters,.hero .cta{display:none!important}
+.hero{min-height:0;padding:22px 0 32px}
+.cloud{background:#f5f3ed}
+section{padding:30px 0}
+.rv{opacity:1;transform:none}
+.proj,.skill,.edu div{break-inside:avoid;background:#fff;box-shadow:none}
+.proj:after,.contact:after{display:none}
+.featured{grid-template-columns:repeat(2,minmax(0,1fr))}
+.featured .proj:first-child{grid-row:auto;min-height:0}
+.grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.skills{grid-template-columns:repeat(3,minmax(0,1fr))}
+.contact{break-inside:avoid;background:#17211e!important;color:#fff!important}
+.contact .section-kicker{color:#c0ed8d}
+.contact .btn{color:#fff;border-color:#aab5ac}
+.contact .btn.pri{background:#c0ed8d!important;color:#152013!important}
+a{text-decoration:none}
+}
 </style>
 </head>
 <body>
